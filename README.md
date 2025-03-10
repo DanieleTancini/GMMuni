@@ -34,17 +34,17 @@ Input:
 
 - G, the number of components;
 
-- gamma, a tuning parameter for the penalization function (see 4.2 in GMM_Unimod.pdf Dropbox);
+- delta, a tuning parameter for the penalization function (it is the delta tuning parameter defined in Section 3.1);
 
-- set, if 1 => m is defined using the mode of the initial GMM estimated, else => m is defined using the weights of the initial GMM estimated 
+- set, if 1 => m is defined using the modes of the initial GMM estimated, else => m is defined using the weights of the initial GMM estimated 
 
-- model, if "yes" a Mclust model is used for evaluate starting points and mode estimates
+- model, if "yes" a Mclust model is used for evaluate the starting points and the mode estimates
 
-- model_est, Mclust model
+- model_est, if model == "yes", it must contain the Mclust model
 
 - force_est, if 1 the algorithm is forced to provide a PMLE even if MEM indicates 1 mode
 
-- den, a logical, if TRUE a denoising procedure is used when d>1 to discard all modes whose density is negligible;
+- den, it is logical, if TRUE a denoising procedure is used when d>1 to discard all modes whose density is negligible;
 
 Output:
 
